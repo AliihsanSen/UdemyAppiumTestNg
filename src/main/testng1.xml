@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name = "Suite" parallel = "false">
+    <test name = "Login">
+        <parameter name = "platformName" value = "Android"/>
+        <parameter name = "deviceName" value = "Any device name"/>
+        <classes>
+            <class name="qa.mobile.Login"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test name = "Login">
+        <parameter name = "platformName" value = "Android"/>
+        <parameter name = "deviceName" value = "Any device name"/>
+        <classes>
+            <class name="qa.mobile.Login"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

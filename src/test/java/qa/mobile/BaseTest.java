@@ -3,14 +3,21 @@ package qa.mobile;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -20,8 +27,10 @@ public class BaseTest {
     protected Properties properties;
     InputStream inputStream;
 
+    @Parameters({"platformName", "deviceName"})
+
     @BeforeClass
-    public void beforeClass() {
+    public void beforeClass(String platformName, String deviceName) {
 
         try {
             properties = new Properties();
@@ -30,7 +39,7 @@ public class BaseTest {
             properties.load(inputStream);
 
             DesiredCapabilities caps = new DesiredCapabilities();
-            caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+            caps.setCapability(MobileCapabilityType.PLATFORM_NAME, platformName);
             caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, properties.getProperty("androidAutomationName"));
             // caps.setCapability(MobileCapabilityType.UDID, "emulator-5554");
             caps.setCapability("avdLaunchTimeout", 180000);
@@ -50,7 +59,12 @@ public class BaseTest {
         }catch (Exception e) {
             e.printStackTrace();
         }
+    }
 
+    public void waitForVisibility(WebElement e){
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.invisibilityOf(e));
     }
 
     @AfterClass
