@@ -25,7 +25,7 @@ public class Login {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-        //  caps.setCapability(MobileCapabilityType.UDID, "emulator-5554");
+        // caps.setCapability(MobileCapabilityType.UDID, "emulator-5554");
         caps.setCapability("avdLaunchTimeout", 180000);
         caps.setCapability("appPackage", "com.swaglabsmobileapp");
         caps.setCapability("appActivity", "com.swaglabsmobileapp.SplashActivity");
