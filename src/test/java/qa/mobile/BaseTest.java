@@ -2,10 +2,12 @@ package qa.mobile;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -27,6 +29,10 @@ public class BaseTest {
     protected AppiumDriver driver;
     protected Properties properties;
     InputStream inputStream;
+
+    public BaseTest() {
+        PageFactory.initElements(new AppiumFieldDecorator(driver),this);
+    }
 
     @Parameters({"platformName", "deviceName"})
 
@@ -76,6 +82,11 @@ public class BaseTest {
     public void sendKeys(WebElement e, String txt){
         waitForVisibility(e);
         e.sendKeys(txt);
+    }
+
+    public void getAttribute(WebElement e, String attribute) {
+        waitForVisibility(e);
+        e.getAttribute(attribute);
     }
 
     @AfterClass
