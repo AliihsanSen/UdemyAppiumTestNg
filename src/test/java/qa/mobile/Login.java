@@ -40,7 +40,7 @@ public class Login {
         URL url = new URL("http://0.0.0.0:4723/");
 
         driver = new AndroidDriver(url, caps);
-        System.out.println("Session Id : " + driver.getSessionId());
+        System.out.println("Session Id = " + driver.getSessionId());
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
