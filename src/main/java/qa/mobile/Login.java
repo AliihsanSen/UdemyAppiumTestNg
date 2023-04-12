@@ -21,6 +21,7 @@ public class Login {
 
     @BeforeClass
     public void beforeClass() throws MalformedURLException {
+
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
@@ -62,7 +63,6 @@ public class Login {
         System.out.println("actual Error Text = " + actualErrTxt);
         String expectedErrTxt = "Username and password do not match any user in this service.";
         Assert.assertEquals(actualErrTxt, expectedErrTxt);
-
     }
 
     @Test
@@ -83,7 +83,6 @@ public class Login {
         System.out.println("actual Error Text = " + actualErrTxt);
         String expectedErrTxt = "Username and password do not match any user in this service.";
         Assert.assertEquals(actualErrTxt, expectedErrTxt);
-
     }
 
     @Test
@@ -108,6 +107,7 @@ public class Login {
 
     @AfterClass
     public void afterClass(){
+
         driver.quit();
     }
 }
