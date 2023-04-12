@@ -13,6 +13,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import utils.TestUtils;
 
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -65,6 +66,16 @@ public class BaseTest {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.invisibilityOf(e));
+    }
+
+    public void click (WebElement e){
+        waitForVisibility(e);
+        e.click();
+    }
+
+    public void sendKeys(WebElement e, String txt){
+        waitForVisibility(e);
+        e.sendKeys(txt);
     }
 
     @AfterClass
