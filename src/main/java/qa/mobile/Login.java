@@ -15,7 +15,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 
-public class test1 {
+public class Login {
 
     AppiumDriver driver;
 
@@ -102,7 +102,7 @@ public class test1 {
 
         String actualProductTitle = productTitle.getAttribute("text");
         System.out.println("actualProductTitle = " + actualProductTitle);
-        String expectedProductTitle = "PRODUCT";
+        String expectedProductTitle = "PRODUCTS";
         Assert.assertEquals(actualProductTitle, expectedProductTitle);
     }
 

@@ -2,7 +2,7 @@
 <suite name = "Suite" parallel = "false">
     <test name = "Test">
         <classes>
-            <class name="qa.mobile.test1"/>
+            <class name="qa.mobile.Login"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
