@@ -32,7 +32,7 @@ public class Login {
 
         /*
         caps.setCapability(MobileCapabilityType.APP,
-                "/Users/tribe/Desktop/Projects/AppiumProjects/MyFirstAppiumProjectTestNG/src/main/resources/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
+                "/Users/tribe/Desktop/Projects/AppiumProjects/MyFirstAppiumProjectTestNG/src/main/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
 
         //  ==> Yüklenmemiş uygulamayı mobil cihaza yüklemek için kullanılır.
         */
