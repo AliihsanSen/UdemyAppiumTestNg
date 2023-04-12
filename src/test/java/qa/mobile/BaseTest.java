@@ -68,6 +68,9 @@ public class BaseTest {
     }
 
     @AfterClass
-    public void afterClass()  {}
+    public void afterClass()  {
+
+        driver.quit();
+    }
 
 }
