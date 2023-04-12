@@ -1,7 +1,9 @@
 package qa.mobile;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -15,6 +17,10 @@ import java.util.concurrent.TimeUnit;
 public class test1 {
 
     AppiumDriver driver;
+    WebElement usernameTxtFld = driver.findElement(AppiumBy.accessibilityId("test-Username"));
+    WebElement passwordTxtFld = driver.findElement(AppiumBy.accessibilityId("test-Password"));
+    WebElement loginBtn = driver.findElement(AppiumBy.accessibilityId("test-LOGIN"));
+    WebElement errTxt = driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"test-Error message\"]/android.widget.TextView"));
 
     @BeforeClass
     public void beforeClass() throws MalformedURLException {
@@ -35,20 +41,19 @@ public class test1 {
 
         URL url = new URL("http://0.0.0.0:4723/");
 
-        AppiumDriver driver = new AndroidDriver(url, caps);
+        driver = new AndroidDriver(url, caps);
         System.out.println("Session Id : " + driver.getSessionId());
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
 
     @Test
-    public void f()   {
+    public void Test01()   {
 
     }
 
     @AfterClass
     public void afterClass(){
-
         driver.quit();
     }
 }
