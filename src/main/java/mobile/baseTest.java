@@ -1,36 +1,31 @@
-package qa.mobile;
+package mobile;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
-import utils.TestUtils;
 
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class BaseTest {
+public class baseTest {
 
     protected AppiumDriver driver;
     protected Properties properties;
     InputStream inputStream;
 
-    public BaseTest() {
+    public baseTest() {
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);
     }
 
@@ -84,9 +79,9 @@ public class BaseTest {
         e.sendKeys(txt);
     }
 
-    public void getAttribute(WebElement e, String attribute) {
+    public String getAttribute(WebElement e, String attribute) {
         waitForVisibility(e);
-        e.getAttribute(attribute);
+        return e.getAttribute(attribute);
     }
 
     @AfterClass

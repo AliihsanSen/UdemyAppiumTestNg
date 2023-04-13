@@ -1,8 +1,6 @@
 package utils;
 
-import java.time.Duration;
-
-public class TestUtils {
+public class testUtils {
 
     public static final long WAIT = 10;
 }

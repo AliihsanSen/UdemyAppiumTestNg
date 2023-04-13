@@ -1,10 +1,11 @@
 package pages;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import mobile.baseTest;
 import org.openqa.selenium.WebElement;
-import qa.mobile.BaseTest;
 
-public class loginPage extends BaseTest {
+
+public class loginPage extends baseTest {
 
     @AndroidFindBy (accessibility = "test-Username")
     private WebElement usernameTxtFld ;
@@ -14,10 +15,6 @@ public class loginPage extends BaseTest {
     private WebElement loginBtn ;
     @AndroidFindBy (xpath = "//android.view.ViewGroup[@content-desc=\"test-Error message\"]/android.widget.TextView")
     private WebElement errTxt ;
-
-    @AndroidFindBy (xpath = "//android.view.ViewGroup[@content-desc=\"test-Cart drop zone\"]/android.view.ViewGroup" +
-            "/android.widget.TextView")
-    private WebElement productTitle ;
 
     public  loginPage enterUserName(String userName) {
         sendKeys(usernameTxtFld,userName);
@@ -29,9 +26,13 @@ public class loginPage extends BaseTest {
         return this;
     }
 
-    public  productsPage pressLoginBtn() {
+    public productsPage pressLoginBtn() {
         click(loginBtn);
         return new productsPage();
+    }
+
+    public String getErrText(){
+        return getAttribute(errTxt,"text");
     }
 
 }
