@@ -9,5 +9,8 @@
         <module name="MyFirstAppiumProjectTestNG" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="MyFirstAppiumProjectTestNG" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
