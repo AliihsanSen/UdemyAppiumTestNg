@@ -4,7 +4,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebElement;
 import qa.mobile.BaseTest;
 
-public class loginPage extends BaseTest {
+public class productsPage extends BaseTest {
 
     @AndroidFindBy (accessibility = "test-Username")
     private WebElement usernameTxtFld ;
@@ -19,12 +19,12 @@ public class loginPage extends BaseTest {
             "/android.widget.TextView")
     private WebElement productTitle ;
 
-    public  loginPage enterUserName(String userName) {
+    public productsPage enterUserName(String userName) {
         sendKeys(usernameTxtFld,userName);
         return this;
     }
 
-    public  loginPage enterPassword(String password) {
+    public productsPage enterPassword(String password) {
         sendKeys(passwordTxtFld,password);
         return this;
     }
