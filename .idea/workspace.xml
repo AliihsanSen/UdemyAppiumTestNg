@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a29e3386-a31c-45fc-862b-9edba039df8f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_28.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_2_0_6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyFirstAppiumProjectTestNG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MyFirstAppiumProjectTestNG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mobile/baseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mobile/baseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/testng1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testng1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/tests/loginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/tests/loginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mobile/baseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mobile/baseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/qa/tests/loginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/qa/tests/loginTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,41 +70,7 @@
       <recent name="pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.loginTest">
-    <configuration name="Login (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyFirstAppiumProjectTestNG" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mobile.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mobile" />
-      <option name="MAIN_CLASS_NAME" value="mobile.Login" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Login" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyFirstAppiumProjectTestNG" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mobile.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mobile" />
-      <option name="MAIN_CLASS_NAME" value="mobile.Login" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG./Users/tribe/Library/Caches/JetBrains/IdeaIC2022.3/temp-testng-customsuite.xml">
     <configuration name="Login" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstAppiumProjectTestNG" />
       <extension name="coverage">
@@ -129,9 +88,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="/Users/tribe/Desktop/Projects/AppiumProjects/MyFirstAppiumProjectTestNG/src/main/java/testng1.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyFirstAppiumProjectTestNG" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/java/testng1.xml" />
+    <configuration name="/Users/tribe/Library/Caches/JetBrains/IdeaIC2022.3/temp-testng-customsuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <option name="SUITE_NAME" value="$USER_HOME$/Library/Caches/JetBrains/IdeaIC2022.3/temp-testng-customsuite.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -173,13 +131,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="loginTest.invalidPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstAppiumProjectTestNG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.tests.loginTest" />
+      <option name="METHOD_NAME" value="invalidPassword" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="loginTest.successfulLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstAppiumProjectTestNG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.tests.loginTest" />
+      <option name="METHOD_NAME" value="successfulLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG./Users/tribe/Library/Caches/JetBrains/IdeaIC2022.3/temp-testng-customsuite.xml" />
+        <item itemvalue="TestNG.loginTest.successfulLogin" />
+        <item itemvalue="TestNG.loginTest.invalidPassword" />
         <item itemvalue="TestNG.loginTest" />
         <item itemvalue="TestNG.loginTest (1)" />
-        <item itemvalue="TestNG.Login (1)" />
-        <item itemvalue="TestNG.Login" />
-        <item itemvalue="TestNG./Users/tribe/Desktop/Projects/AppiumProjects/MyFirstAppiumProjectTestNG/src/main/java/testng1.xml" />
       </list>
     </recent_temporary>
   </component>
