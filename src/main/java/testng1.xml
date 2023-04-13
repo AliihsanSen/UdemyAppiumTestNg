@@ -4,7 +4,7 @@
         <parameter name = "platformName" value = "Android"/>
         <parameter name = "deviceName" value = "Any device name"/>
         <classes>
-            <class name="qa.mobile.Login"/>
+            <class name="com.qa.tests.loginTest"/>
         </classes>
     </test> <!-- Test -->
 
@@ -12,7 +12,7 @@
         <parameter name = "platformName" value = "Android"/>
         <parameter name = "deviceName" value = "Any device name"/>
         <classes>
-            <class name="qa.mobile.Login"/>
+            <class name="com.qa.tests.loginTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

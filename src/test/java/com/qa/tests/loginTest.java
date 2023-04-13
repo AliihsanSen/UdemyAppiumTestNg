@@ -1,74 +1,74 @@
 package com.qa.tests;
 
 import io.appium.java_client.AppiumBy;
+import mobile.baseTest;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.loginPage;
 import pages.productsPage;
 
-public class loginTest {
+import java.lang.reflect.Method;
+
+public class loginTest extends baseTest {
 
     loginPage loginPage;
     productsPage productsPage;
+
     @BeforeClass
-    public void beforeClass(){}
-
-    @Test
-    public void invalidUserName()   {
-
-        usernameTxtFld.sendKeys("invalidusername");
-        passwordTxtFld.sendKeys("secret_sauce");
-        loginBtn.click();
-
-        WebElement errTxt = driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"test" +
-                "-Error message\"]/android.widget.TextView"));
-
-        String actualErrTxt = errTxt.getAttribute("text");
-        System.out.println("actual Error Text = " + actualErrTxt);
-        String expectedErrTxt = "Username and password do not match any user in this service.";
-        Assert.assertEquals(actualErrTxt, expectedErrTxt);
+    public void beforeClass() {
     }
 
-    @Test
-    public void invalidPassword(){
-
-        usernameTxtFld.sendKeys("standard_user");
-        passwordTxtFld.sendKeys("invalidPassword");
-        loginBtn.click();
-
-        WebElement errTxt = driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"test" +
-                "-Error message\"]/android.widget.TextView"));
-
-        String actualErrTxt = errTxt.getAttribute("text");
-        System.out.println("actual Error Text = " + actualErrTxt);
-        String expectedErrTxt = "Username and password do not match any user in this service.";
-        Assert.assertEquals(actualErrTxt, expectedErrTxt);
+    @BeforeMethod
+    public void beforeMethod(Method name) {
+        loginPage = new loginPage();
+        System.out.println("\n" + "***** Starting Test : " + name.getName() + " *****" + "\n");
     }
-
-    @Test
-    public void successfulLogin(){
-
-        WebElement usernameTxtFld = driver.findElement(AppiumBy.accessibilityId("test-Username"));
-        WebElement passwordTxtFld = driver.findElement(AppiumBy.accessibilityId("test-Password"));
-        WebElement loginBtn = driver.findElement(AppiumBy.accessibilityId("test-LOGIN"));
-
-        usernameTxtFld.sendKeys("standard_user");
-        passwordTxtFld.sendKeys("secret_sauce");
-        loginBtn.click();
-
-        WebElement productTitle = driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-" +
-                "desc=\"test-Cart drop zone\"]/android.view.ViewGroup/android.widget.TextView"));
-
-        String actualProductTitle = productTitle.getAttribute("text");
-        System.out.println("actualProductTitle = " + actualProductTitle);
-        String expectedProductTitle = "PRODUCTS";
-        Assert.assertEquals(actualProductTitle, expectedProductTitle);
+    @AfterMethod
+    public void afterMethod() {
     }
 
     @AfterClass
-    public void afterClass(){}
+    public void afterClass() {
+    }
 
+
+    @Test
+    public void invalidUserName() {
+        loginPage.enterUserName("invalidusername");
+        loginPage.enterPassword("secret_sauce");
+        loginPage.pressLoginBtn();
+
+        String actualErrTxt = loginPage.getErrText();
+        String expectedErrTxt = "Username and password do not match any user in this service.";
+        System.out.println("actual Error Text = " + actualErrTxt + "\n" + "expected Error Text = "  + expectedErrTxt);
+        Assert.assertEquals(actualErrTxt, expectedErrTxt);
+    }
+
+    @Test
+    public void invalidPassword() {
+
+        loginPage.enterUserName("standard_user");
+        loginPage.enterPassword("invalidPassword");
+        loginPage.pressLoginBtn();
+
+        String actualErrTxt = loginPage.getErrText();
+        String expectedErrTxt = "Username and password do not match any user in this service.";
+        System.out.println("actual Error Text = " + actualErrTxt + "\n" + "expected Error Text = "  + expectedErrTxt);
+        Assert.assertEquals(actualErrTxt, expectedErrTxt);
+    }
+
+    @Test
+    public void successfulLogin() {
+
+        loginPage.enterUserName("standard_user");
+        loginPage.enterPassword("secret_sauce");
+        productsPage = loginPage.pressLoginBtn();
+
+        String actualProductTitle = productsPage.getTitle();
+        String expectedProductTitle = "PRODUCTS";
+        System.out.println("actual Product Title = " + actualProductTitle + "\n" +
+                "expected Product Title = " + expectedProductTitle);
+        Assert.assertEquals(actualProductTitle, expectedProductTitle);
+    }
 }

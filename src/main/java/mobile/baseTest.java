@@ -22,8 +22,8 @@ import java.util.concurrent.TimeUnit;
 
 public class baseTest {
 
-    protected AppiumDriver driver;
-    protected Properties properties;
+    protected static AppiumDriver driver;
+    protected static Properties properties;
     InputStream inputStream;
 
     public baseTest() {

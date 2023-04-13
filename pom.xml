@@ -25,8 +25,6 @@
       <version>8.3.0</version>
     </dependency>
 
-
-    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
     <dependency>
       <groupId>org.testng</groupId>
@@ -41,13 +39,6 @@
       <version>4.13.2</version>
       <scope>compile</scope>
     </dependency>
-
-    <dependency>
-      <groupId>net.sourceforge.tess4j</groupId>
-      <artifactId>tess4j</artifactId>
-      <version>4.4.1</version>
-    </dependency>
-
 
     <dependency>
       <groupId>org.junit.jupiter</groupId>
