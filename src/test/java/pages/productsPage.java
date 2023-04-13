@@ -19,6 +19,8 @@ public class productsPage extends BaseTest {
             "/android.widget.TextView")
     private WebElement productTitle ;
 
+
+
     public productsPage enterUserName(String userName) {
         sendKeys(usernameTxtFld,userName);
         return this;
