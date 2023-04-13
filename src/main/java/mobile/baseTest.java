@@ -33,7 +33,7 @@ public class baseTest {
     @Parameters({"platformName", "deviceName"})
 
     @BeforeClass
-    public void beforeClass(String platformName, String deviceName) {
+    public void beforeClass(String platformName) {
 
         try {
             properties = new Properties();
